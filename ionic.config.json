@@ -1,0 +1,7 @@
+{
+  "name": "appSistencia_V2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
