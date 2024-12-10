@@ -1,13 +1,81 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" visibility="show">
   <ion-toolbar>
-    <ion-title>alumno</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">alumno</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+
+      <ion-avatar slot="start">
+        <img src="https://ionicframework.com/docs/demos/api/list/avatar-finn.png">
+      </ion-avatar>
+
+      <ion-label>
+        <h1>Luis Mario Acevedo Sanchez</h1>
+        <h1></h1>
+        <p><span class="date">25/08/2024</span></p>
+      </ion-label>
+
+    </ion-item>
+
+  </ion-list>
+
+  <ion-card>
+    <ion-card-header>
+
+      <div style="text-align: center;">
+
+        <ion-card-title>Escanea el codigo QR</ion-card-title>
+        <br>
+
+        <ion-card-content [style.visibility]="content_visibility">
+          
+        </ion-card-content>
+
+      </div>
+
+    </ion-card-header>
+  
+    <ion-card-content style="align-items: center;">
+      
+      <div style="text-align: center;">
+        <ion-button 
+          expand="block" 
+          color="primary"
+          >Comenzar a escanear
+
+        </ion-button> 
+      </div>
+
+      <br>
+
+      <div >
+
+        <ion-button style="text-align: center;"
+          expand="block" 
+          color="medium"
+          >Ver asistencias
+    
+        </ion-button> 
+      </div>
+
+    </ion-card-content>
+
+    
+
+  </ion-card>
+
+  
+
+  <ion-item *ngIf="scannedResult">
+    <ion-label class="ion-text-wrap">Resultado de escaneo: {{scannedResult}} </ion-label>
+  </ion-item>
+
 </ion-content>
