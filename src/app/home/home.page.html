@@ -1,20 +1,50 @@
+<!-- https://www.npmjs.com/package/angularx-qrcode -->
+<!-- https://ionic.io/blog/how-to-build-an-ionic-barcode-scanner-with-capacitor -->
+
 <ion-header [translucent]="true">
   <ion-toolbar>
+
     <ion-title>
-      Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
+    <!-- barra superior para iOS -->
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Home</ion-title>
     </ion-toolbar>
+
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="content-center">
+
+    <ion-card>
+      <ion-card-header>
+
+        <div style="text-align: center;">
+
+          <ion-card-title>Hola</ion-card-title>
+          <br>
+          <ion-icon name="person-circle" size="large"></ion-icon>
+          <br><br>
+          <ion-card-subtitle>Bienvenido a appSistencia</ion-card-subtitle>
+          <br>
+        </div>
+
+      </ion-card-header>
+    
+      <ion-card-content style="align-items: center;">
+        
+        <div style="text-align: center;">
+          <ion-button [routerLink]="['/login']" expand="block" color="success">Asiste aqui</ion-button> 
+        </div>
+  
+      </ion-card-content>
+    </ion-card>
+
   </div>
+
 </ion-content>

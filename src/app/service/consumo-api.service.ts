@@ -31,6 +31,12 @@ export class ConsumoApiService {
   }
   */
 
+  getPostDatosUsuario(idUser:number):Observable<any>{ // creamos un método que nos devuelva los posts de la api de profesores y alumnos
+    return this.http.get(this.apiUrl+'/usuarios/'+idUser).pipe(
+      retry(3)
+    );
+  }
+
   getPostProfesores():Observable<any>{ // creamos un método que nos devuelva los posts de la api de profesores y alumnos
     return this.http.get(this.apiUrl+'/profesores').pipe(
       retry(3)
