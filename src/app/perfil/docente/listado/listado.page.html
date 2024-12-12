@@ -1,13 +1,43 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>listado</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button (click)="goBackPerfilDocente()"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-icon type="button" (click)="nextPageQR(nombreAsigDoc, codigoAsigDoc, seccionAsigDoc,idCurso)" color="secondary" slot="end" name="qr-code-outline" size="large"> </ion-icon>
+    </ion-buttons>
+
+    <ion-title>Listado</ion-title>
+
+    
   </ion-toolbar>
+  
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">listado</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item color="primary">
+
+    <ion-label style="text-align: center;">
+      <h1 >{{nombreAsigDoc}}</h1>
+      <h2> {{codigoAsigDoc}} - {{seccionAsigDoc}} </h2>
+   
+    </ion-label>
+
+    
+
+  </ion-item>
+
+  <ion-list>
+    <!-- Usamos *ngFor para recorrer y mostrar los alumnos -->
+    <ion-item *ngFor="let alumno of alumnos">
+      <ion-label>{{alumno.nombre}}
+        <p>{{alumno.id}}</p>
+      </ion-label>
+      
+      <ion-checkbox [checked]="alumno.status === 1" slot="end">Presente</ion-checkbox>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

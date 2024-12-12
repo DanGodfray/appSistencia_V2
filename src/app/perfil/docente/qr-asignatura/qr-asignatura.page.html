@@ -1,13 +1,55 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>qrAsignatura</ion-title>
+    <ion-title>QR Asistencia</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button (click)="goBackListado(nombreAsigDoc, codigoAsigDoc, seccionAsigDoc,idCurso)">QR</ion-back-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">qrAsignatura</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <ion-item color="primary">
+
+    <ion-label style="text-align: center;">
+      <h1 id="tituloAsig">{{nombreAsigDoc}}</h1>
+      <h2 id="tituloSeccion">{{codigoAsigDoc}}-{{seccionAsigDoc}} | {{fechaHoy}}</h2>
+      <p></p>
+    </ion-label>
+
+  </ion-item>
+
+  
+
+  <ion-card>
+    <ion-card-header>
+
+      <div style="text-align: center;">
+
+        <ion-card-title>Codigo QR para asistir</ion-card-title>
+        <br>
+
+        <!--                aplicar QR aqui                  -->
+
+      </div>
+
+    </ion-card-header>
+  
+    <ion-card-content style="align-items: center;" >
+
+        <ion-button style="text-align: center; " 
+          expand="block" 
+          color="primary"
+          (click)="nextPageListado(nombreAsigDoc, codigoAsigDoc, seccionAsigDoc,idCurso)">Ver diligentes
+    
+        </ion-button> 
+
+    </ion-card-content>
+
+    
+
+  </ion-card>
+
 </ion-content>
