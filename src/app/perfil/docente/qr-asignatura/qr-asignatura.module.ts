@@ -8,12 +8,15 @@ import { QrAsignaturaPageRoutingModule } from './qr-asignatura-routing.module';
 
 import { QrAsignaturaPage } from './qr-asignatura.page';
 
+import { QRCodeComponent } from 'angularx-qrcode';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    QrAsignaturaPageRoutingModule
+    QrAsignaturaPageRoutingModule,
+    QRCodeComponent
   ],
   declarations: [QrAsignaturaPage]
 })

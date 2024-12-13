@@ -3,9 +3,10 @@ import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { ConsumoApiService } from 'src/app/service/consumo-api.service';
 
 @Component({
-  selector: 'app-listado',
-  templateUrl: './listado.page.html',
-  styleUrls: ['./listado.page.scss'],
+    selector: 'app-listado',
+    templateUrl: './listado.page.html',
+    styleUrls: ['./listado.page.scss'],
+    standalone: false
 })
 export class ListadoPage implements OnInit {
 

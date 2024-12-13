@@ -28,10 +28,16 @@
 
       <div style="text-align: center;">
 
-        <ion-card-title>Codigo QR para asistir</ion-card-title>
+        <ion-card-title>Escanea el codigo QR</ion-card-title>
         <br>
 
-        <!--                aplicar QR aqui                  -->
+        <qrcode
+
+        [qrdata]="qrCodeString" 
+        [width]="256" 
+        [errorCorrectionLevel]="'M'">
+
+        </qrcode>
 
       </div>
 

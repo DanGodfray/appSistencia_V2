@@ -3,11 +3,11 @@ import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import {formatDate} from '@angular/common';
 import { ConsumoApiService } from 'src/app/service/consumo-api.service';
 
-
 @Component({
-  selector: 'app-qr-asignatura',
-  templateUrl: './qr-asignatura.page.html',
-  styleUrls: ['./qr-asignatura.page.scss'],
+    selector: 'app-qr-asignatura',
+    templateUrl: './qr-asignatura.page.html',
+    styleUrls: ['./qr-asignatura.page.scss'],
+    standalone: false
 })
 export class QrAsignaturaPage implements OnInit {
 

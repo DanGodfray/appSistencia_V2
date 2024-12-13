@@ -5,9 +5,10 @@ import { Observable } from 'rxjs';
 import { ConsumoApiService } from 'src/app/service/consumo-api.service';
 
 @Component({
-  selector: 'app-docente',
-  templateUrl: './docente.page.html',
-  styleUrls: ['./docente.page.scss'],
+    selector: 'app-docente',
+    templateUrl: './docente.page.html',
+    styleUrls: ['./docente.page.scss'],
+    standalone: false
 })
 export class DocentePage implements OnInit {
 
