@@ -37,6 +37,13 @@
 
         <ion-card-content >
           <!--                aplicar QR aqui                  -->
+          <qrcode
+
+          [qrdata]="qrCodeString" 
+          [width]="256" 
+          [errorCorrectionLevel]="'M'">
+
+          </qrcode>
         </ion-card-content>
 
       </div>
@@ -60,13 +67,14 @@
       <br>
 
       <div >
-
+        <!--
         <ion-button style="text-align: center;"
           expand="block" 
           color="medium"
           >Ver asistencias
     
         </ion-button> 
+        -->
       </div>
 
     </ion-card-content>

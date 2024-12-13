@@ -19,7 +19,9 @@ export class ConsumoApiService {
   }
 
   //apiUrlEj = 'https://jsonplaceholder.typicode.com'; // definimos la url de la api de jsonplaceholder
-  apiUrl = 'http://127.0.0.1:5000/'; // definimos la url de la api en python con flask
+  //apiUrl = 'https://0dde-152-230-70-162.ngrok-free.app'; // definimos la url de la api en python con flask
+  apiUrl = 'https://s5994bcd-5000.brs.devtunnels.ms/'; // definimos la url de la api en python con flask
+ 
 
   constructor(private http:HttpClient) { }
 
@@ -44,6 +46,7 @@ export class ConsumoApiService {
   }
 
   public getPostCursosProfesor(idProf:number):Observable<any>{ // creamos un método que nos devuelva los posts de la api de profesores y alumnos
+    
     return this.http.get(this.apiUrl+'/profesores/'+idProf+'/cursos', this.httpOptions).pipe(
       retry(3)
     );

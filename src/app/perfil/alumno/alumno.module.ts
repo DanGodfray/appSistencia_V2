@@ -7,9 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { AlumnoPageRoutingModule } from './alumno-routing.module';
 
 import { AlumnoPage } from './alumno.page';
-//import { QRCodeModule } from 'angularx-qrcode';
 
-
+import { QRCodeComponent } from 'angularx-qrcode';
 
 @NgModule({
   imports: [
@@ -17,7 +16,7 @@ import { AlumnoPage } from './alumno.page';
     FormsModule,
     IonicModule,
     AlumnoPageRoutingModule,
-    //QRCodeModule
+    QRCodeComponent
   ],
   declarations: [AlumnoPage]
 })

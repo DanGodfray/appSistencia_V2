@@ -37,15 +37,7 @@ export class DocentePage implements OnInit {
         this.nomDoc = this.router.getCurrentNavigation()?.extras.state?.['nombre'];
         this.perfDoc = this.router.getCurrentNavigation()?.extras.state?.['perfil'];
         this.mailDoc = this.router.getCurrentNavigation()?.extras.state?.['correo'];
-        //debugeo de pruebas console.log
-        /**
-        console.log("id: "+ this.router.getCurrentNavigation()?.extras.state?.['id']);
-        console.log("user: "+ this.router.getCurrentNavigation()?.extras.state?.['user']);
-        console.log("password: "+ this.router.getCurrentNavigation()?.extras.state?.['password']);
-        console.log("nombre: "+ this.router.getCurrentNavigation()?.extras.state?.['nombre']);
-        console.log("perfil: "+ this.router.getCurrentNavigation()?.extras.state?.['perfil']);
-        console.log("correo: "+ this.router.getCurrentNavigation()?.extras.state?.['correo']);
-        */
+        
       }
       
   
